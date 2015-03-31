@@ -18,7 +18,10 @@ function submitForm(e){
   var address = '☆あなたのGmailアドレスを記入☆';
   var title = 'お問い合わせフォームが送信されました';
   var content = '以下の内容でフォームが送信されました。\n\n' + message;
-  GmailApp.sendEmail(address, title, content);
+  GmailApp.sendEmail(
+    address, title, content,{
+     name: 'manma'
+ });
   var title2 = '家族留学にご登録いただきありがとうございます';
   var content2 = username + '様\n\nこの度は、家族留学への登録ありがとうございます。\n\n'
     + '家族留学は、女子大生が子育て家庭に\n'
@@ -33,5 +36,8 @@ function submitForm(e){
     + 'ご質問などお気軽に ogo@manma.co（尾郷）へご連絡くださいませ。\n\n'
     + 'どうぞよろしくお願いいたします。\n'
     
-  GmailApp.sendEmail(mail, title2, content2);
+  GmailApp.sendEmail(
+    mail, title2, content2,{
+     name: 'manma'
+ });
 }
