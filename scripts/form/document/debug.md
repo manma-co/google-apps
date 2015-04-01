@@ -6,11 +6,16 @@
 
 * 自動返信のscript画面に移動する
 * リソース＞現在のプロジェクトのトリガー　をクリック
-![例](./images/mail-debug1.png)
-* 通知をクリック
-![例](./images/mail-debug2.png)
-* 通知を設定する
-![例](./images/mail-debug3.png)
+
+![例1](./images/mail-debug1.PNG)
+
+* 通知をクリック  
+
+![例2](./images/mail-debug2.PNG)
+
+* 通知を設定する  
+
+![例3](./images/mail-debug3.PNG)
 
 ## デバック
 失敗したらメールが届くのでその内容を確認
