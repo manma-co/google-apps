@@ -11,7 +11,7 @@ function alert_abroad_Function(){
    
   var alrert_message = "";
   var alrert_mail_flag = 0;
-  
+  var remaind_time = new Date(year,month-1,day).getTime();
   var dataRange = sheet.getRange(startRow, 1, lastRow, lastCol);
  
   var data = dataRange.getValues();
@@ -21,25 +21,24 @@ function alert_abroad_Function(){
     var check_flag = row[10];
     if (check_flag == ""){
       var register_date = row[0];
-      var date_check = remaind_time - (60*60*24*1000) * 2;
+      var date_check = remaind_time - (60*60*24*1000) * 3;
       if (date_check > register_date) {  
          alrert_mail_flag = 1 ;
-         alrert_message = alrert_message + row[1] + "\n";       // Second column
+         alrert_message = alrert_message + row[4] + "\n";       // Second column
        }
     }
   }
   if (alrert_mail_flag == 1){
-  var alrert_subject = "【至急】実施学生確認";
+  var subject = "【至急】実施学生確認";
   var manma_mail = 'hidemasuoka112@gmail.com';
   var message = "以下のメンバーの実施日程確認チェックが\"Ｋ列\"に記入されていません。\n"
   + alrert_message;
  
 
-    GmailApp.sendEmail(manma_mail,alrert_subject,alrert_message,
+    GmailApp.sendEmail(manma_mail,subject,message,
     {
       name: 'manmaアラート'
     }
     );
   }
 }
-

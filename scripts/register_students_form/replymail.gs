@@ -14,7 +14,7 @@ function submitForm(e){
     if (question == 'メールアドレス'){
       apply_mail  = answer;
     }
-    if (question == '3月　事前説明会兼カウンセリング　希望日程'){
+    if (question == '事前説明会兼カウンセリング　希望日程'){
       date = answer;
     }
     message += (i + 1).toString() + '. ' + question + ': ' + answer + '\n';

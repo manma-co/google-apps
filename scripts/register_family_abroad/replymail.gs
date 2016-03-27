@@ -15,13 +15,15 @@ function submitForm(e){
   }
 
   //manmaメンバー向けメール設定  
-  var manma_mail = "info@manma.co";
+  var manma_mail = "hidemasuoka112@gmail.com";
+  var self_subject  = "受入家庭から連絡がありました";
   var self_body  = "以下の内容でフォームが送信されました。\n\n" + message;
   
   //自動送信向けメール設定  
-  var subject = "家族留学にご登録いただきありがとうございます";
+  var subject = "受け入れのご登録いただきありがとうございます";
   var body  = "ご登録ありがとうございます\n\n"
   + message
+  + "\n"
   + "以上の内容を修正したい場合は、info@manma.co までご連絡ください";
   
    //manmaメンバー向け

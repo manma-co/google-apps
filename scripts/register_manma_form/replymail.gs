@@ -10,7 +10,7 @@ function submit_Form(e){
     if (question == 'manma担当者名'){
       var account_name = answer;
     }
-    if (question == 'manma担当者名'){
+    if (question == '担当者連絡先'){
       var account_mail = answer;
     }
     if (question == '参加学生名'){
@@ -67,7 +67,7 @@ var to_mail = family_mail + ',' + account_mail
 //登録者向け
 GmailApp.sendEmail(to_mail,subject,body,
 {
-  name: account_name
+  name: "manma "+ account_name
 }
 );
 }

@@ -25,8 +25,8 @@ function alert_meeting_Function(){
 
   for (var i = 0; i < data.length; ++i) {
     var row = data[i];
-    var meeting_day = row[23];
-    if (meeting_day == ""){
+    var meeting_day = row[22];
+    if (meeting_day == null){
       var register_date = row[0];
       var date_check = remaind_time - (60*60*24*1000) * 2;
       if (date_check > register_date) {  
@@ -43,16 +43,16 @@ function alert_meeting_Function(){
   }
   }
   if (alrert_mail_flag == 1){
-    var alrert_subject = "【至急】新規登録者確認";
+    var subject = "【至急】新規登録者確認";
     var manma_mail = 'hidemasuoka112@gmail.com'
     var message = "以下のメンバーの新規登録の日程が\"X列\"に記入されていません。\n"
-    + alrert_message
+    + alrert_message　+"\n\n"
     + "以下のメンバーの新規登録の日程が\"P列\"の値が「その他」になっています。決定した日程に変更してください\n"
-    + warning_message
+    + warning_message+"\n\n"
     + "事前説明会の日程を確認し、至急スプレッドシートに日程を記入してください。"
 
 
-    GmailApp.sendEmail(manma_mail,alrert_subject,alrert_message,
+    GmailApp.sendEmail(manma_mail,subject,message,
     {
       name: 'manmaアラート'
     }
