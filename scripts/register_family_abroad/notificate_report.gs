@@ -33,7 +33,7 @@ function notificate_report_Function(){
     var familyabroad_dateTime = Utilities.formatDate(family_abroad_dateTime, 'JST', 'HH:mm')
  
     if (familyabroad_date == remainddate){
-    	var student_subject = "【manma】家族留学実施リマインド";
+    	var student_subject = "【manma】家族留学にご参加くださりありがとうございました";
         var student_message = student_name + "さま\n\n"
         + "お世話になっております、manmaです。\n\n"
         + "今回の家族留学はいかがしたか?\n"
@@ -59,7 +59,7 @@ function notificate_report_Function(){
         + "ご報告をお待ちしております！\n\n"
         + "manma";
         
-        var family_subject = "【manma】家族留学実施リマインド";
+        var family_subject = "【manma】家族留学受け入れのお礼";
         var family_message = family_name+ "様\n\n"
         + "お世話になっております、manma 家族留学事務局です。\n"
         + "今回は留学生を受け入れてくださり、本当にありがとうございました！\n\n"

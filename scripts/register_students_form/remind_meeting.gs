@@ -24,9 +24,9 @@ function remind_meeting_Function(){
   for (var i = 0; i < data.length; ++i) {
     var row = data[i];
     var apply_name =  row[1];
-    var remind_mail =  row[5];
+    var remind_mail =  row[7];
     var meeting_date = row[15];
-    var meeting_day = row[23];
+    var meeting_day = row[22];
     if (meeting_day !== ""　| meeting_date !=="その他"){
       var meetingday = Utilities.formatDate(meeting_day, 'JST', 'yyyy/MM/dd');
       if (remaindday == meetingday ){
