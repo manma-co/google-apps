@@ -29,7 +29,7 @@ function remaind_report_Function(){
 
     if (familyabroad_date == remainddate){
       if(report_flag==""){
-        var student_subject = "【manma】家族留学実施リマインド";
+        var student_subject = "【manma】参加後レポートの提出のご確認";
         var student_message = student_name + "さま\n\n"
         + "お世話になっております、manmaです。\n\n"
         + "先日ご案内いたしましたフォームへのご記入をよろしくお願いいたします。\n"

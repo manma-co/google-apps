@@ -34,7 +34,7 @@ function remaind_family_abroad_Function(){
  
     if (familyabroad_date == remainddate){
     	var mail = family_mail + "," + student_mail + "," + ""
-    	var subject = "【manma】家族留学実施リマインド";
+      var subject = "【manma】家族留学当日のお知らせ";
         var message = "受け入れ家庭\n"
         + family_name+ "さま\n\n"
         + "留学生\n"

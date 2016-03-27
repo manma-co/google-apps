@@ -25,7 +25,7 @@ function submitForm(e){
   var self_body  = "以下の内容でフォームが送信されました。\n\n" + message;
   
   //自動送信向けメール設定  
-  var subject = "家族留学にご登録いただきありがとうございます";
+  var subject = "【manma】家族留学へのご登録ありがとうございます";
   
   // その他
   if (date == "その他"){
