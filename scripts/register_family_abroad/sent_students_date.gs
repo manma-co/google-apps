@@ -1,5 +1,5 @@
 // 家族留学が実施できる旨を学生に連絡するscript
-// updated_at: 20161006
+// updated_at: 20161007
 // edited by: shinocchi
 function sent_students_date_Function() {
   var MAM_COLUMN = {
@@ -35,9 +35,9 @@ function sent_students_date_Function() {
     if (status == "はい"){
       var student_name = row[MAM_COLUMN.STUDENT_NAME];
       var student_mail = row[MAM_COLUMN.STUDENT_EMAIL];
-      var abroad_start_date = row[MAM_COLUMN.START_DATE];
-      var abroad_start_time = row[MAM_COLUMN.START_TIME];
-      var abroad_finish_time = new Date(row[MAM_COLUMN.FINISH_TIME]);  // string型になってしまうのでDate型に変換
+      var abroad_start_date = new Date(row[MAM_COLUMN.START_DATE]);
+      var abroad_start_time = new Date(row[MAM_COLUMN.START_TIME]);
+      var abroad_finish_time = new Date(row[MAM_COLUMN.FINISH_TIME]);
       var abroad_place = row[MAM_COLUMN.MTG_PLACE];
 
       var f_abroad_start_date = Utilities.formatDate(abroad_start_date, 'Asia/Tokyo', 'yyyy/MM/dd');
@@ -75,3 +75,4 @@ function sent_students_date_Function() {
     }
   }
 }
+
